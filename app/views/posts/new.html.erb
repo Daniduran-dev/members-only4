@@ -1,0 +1,10 @@
+<p>Fill in the form to create a new post</p>
+<br><br>
+<h1>New Post:</h1>
+<%= form_with model: @post do |f| %>
+  <%= f.label :title, "Your Post title here:" %> <br>
+  <%= f.text_field :title, value: 'Title' %> <br><br>
+  <%= f.label :body, "Post:" %> <br>
+  <%= f.text_area :body, placeholder: 'Write here...' %> <br><br>
+  <%= f.submit %>
+<% end %>
